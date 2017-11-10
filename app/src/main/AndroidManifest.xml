@@ -11,6 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+
+        <!--设置-->
+        <activity android:name=".ui.SettingActivity"
+            android:label="@string/setting"/>
+
+        <!--闪屏-->
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +26,8 @@
             </intent-filter>
         </activity>
 
-        <!--设置-->
-        <activity android:name=".ui.SettingActivity"
-            android:label="@string/setting"/>
+        <!--引导页-->
+        <activity android:name=".ui.GuideActivity"/>
 
     </application>
 
