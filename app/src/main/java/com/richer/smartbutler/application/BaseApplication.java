@@ -5,7 +5,7 @@ package com.richer.smartbutler.application;
 * 包名： com.richer.smartbutler.application
 * 文件名： BaseApplication
 * 创建者： RicherQiao
-* 创建时间： ${DATA}21:47
+* 创建时间： 2017/11/09 21:47
 * 描述： TODO
 */
 

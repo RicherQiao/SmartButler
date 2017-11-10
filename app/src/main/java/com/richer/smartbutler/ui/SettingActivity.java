@@ -4,7 +4,7 @@ package com.richer.smartbutler.ui;
 * 包名： com.richer.smartbutler.ui
 * 文件名： SettingActivity
 * 创建者： RicherQiao
-* 创建时间： ${DATA}1:07
+* 创建时间： 2017/11/09 1:07
 * 描述： 设置
 */
 

@@ -4,7 +4,7 @@ package com.richer.smartbutler.ui;
 * 包名： com.richer.smartbutler.ui
 * 文件名： BaseActivity
 * 创建者： RicherQiao
-* 创建时间： ${DATA}21:49
+* 创建时间： 2017/11/09 21:49
 * 描述： Activity基类
 */
 

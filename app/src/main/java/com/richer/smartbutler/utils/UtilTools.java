@@ -4,7 +4,7 @@ package com.richer.smartbutler.utils;
 * 包名： com.richer.smartbutler.utils
 * 文件名： UtilTools
 * 创建者： RicherQiao
-* 创建时间： ${DATA}22:09
+* 创建时间： 2017/11/09 22:09
 * 描述： 工具统一类
 */
 
