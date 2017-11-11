@@ -67,18 +67,26 @@ public class SplashActivity extends AppCompatActivity{
 
         tvSplash = (TextView) findViewById(R.id.tv_splash);
         //设置字体
-        //UtilTools.setFont(this,tvSplash);
+        UtilTools.setFont(this,tvSplash);
     }
 
     //判断程序是否第一次运行
     private boolean isFirst() {
         boolean isFirst = ShareUtils.getBoolean(this,StaticClass.SHARE_IS_FIRST,true);
         if (isFirst){
+            //标记我们已经启动过App
             ShareUtils.putBoolean(this,StaticClass.SHARE_IS_FIRST,false);
             //是第一次运行
             return true;
         }else {
             return false;
         }
+    }
+
+    //禁止返回键
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 }
