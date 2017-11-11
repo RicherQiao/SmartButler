@@ -6,4 +6,5 @@
     <string name="personal_center">个人中心</string>
     <string name="setting">设置</string>
     <string name="tv_guide">引导页</string>
+    <string name="btn_start">进入主页</string>
 </resources>
