@@ -10,14 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
-        <!--设置-->
-        <activity android:name=".ui.SettingActivity"
-            android:label="@string/setting"/>
-
-        <!--闪屏-->
+        <!-- 闪屏 -->
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +21,10 @@
             </intent-filter>
         </activity>
 
-        <!--引导页-->
-        <activity android:name=".ui.GuideActivity"/>
-
+        <!-- 引导页 -->
+        <activity android:name=".ui.GuideActivity" />
+        <!--设置-->
+        <activity android:name=".ui.SettingActivity"></activity>
     </application>
 
 </manifest>

@@ -44,7 +44,7 @@ public class SplashActivity extends AppCompatActivity{
                     if (isFirst()){
                         startActivity(new Intent(SplashActivity.this,GuideActivity.class));
                     }else{
-                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        startActivity(new Intent(SplashActivity.this,MainActivity.class));
                     }
                     finish();
                     break;
@@ -53,8 +53,8 @@ public class SplashActivity extends AppCompatActivity{
     };
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         initView();
