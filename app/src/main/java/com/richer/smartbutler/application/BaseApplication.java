@@ -11,6 +11,9 @@ package com.richer.smartbutler.application;
 
 import android.app.Application;
 
+import com.richer.smartbutler.utils.StaticClass;
+import com.tencent.bugly.crashreport.CrashReport;
+
 public class BaseApplication extends Application{
 
     //创建
@@ -18,5 +21,7 @@ public class BaseApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        //初始化Bugly
+        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, true);
     }
 }
