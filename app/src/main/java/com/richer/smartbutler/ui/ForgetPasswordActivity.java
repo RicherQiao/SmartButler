@@ -35,7 +35,14 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
     private void initView() {
         btnForgetPassword = (Button) findViewById(R.id.btn_forget_password);
         etEmail = (EditText) findViewById(R.id.et_email);
+
+        etOld = (EditText) findViewById(R.id.et_old);
+        etNew = (EditText) findViewById(R.id.et_new);
+        etAgain = (EditText) findViewById(R.id.et_again);
+        btnRevise = (Button) findViewById(R.id.btn_revise);
+
         btnForgetPassword.setOnClickListener(this);
+        btnRevise.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +66,34 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
                             }
                         }
                     });
+                }else {
+                    Toast.makeText(this,"输入框不能为空",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.btn_revise:
+                //1.获取输入框的值
+                String old = etOld.getText().toString().trim();
+                String newPassword = etNew.getText().toString().trim();
+                String again = etAgain.getText().toString().trim();
+                //2.判断是否为空
+                if (!TextUtils.isEmpty(old) & !TextUtils.isEmpty(newPassword) & !TextUtils.isEmpty(again)){
+                    //3.判断两次新密码是否一致
+                    if (newPassword.equals(again)){
+                        //4.重置密码
+                        MyUser.updateCurrentUserPassword(old, newPassword, new UpdateListener() {
+                            @Override
+                            public void done(BmobException e) {
+                                if (e == null){
+                                    Toast.makeText(ForgetPasswordActivity.this,"重置密码成功",Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }else {
+                                    Toast.makeText(ForgetPasswordActivity.this,"重置密码失败",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }else {
+                        Toast.makeText(this,"两次输入的密码不一致",Toast.LENGTH_SHORT).show();
+                    }
                 }else {
                     Toast.makeText(this,"输入框不能为空",Toast.LENGTH_SHORT).show();
                 }

@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin.setOnClickListener(this);
         ckKeepPassword = (CheckBox) findViewById(R.id.keep_password);
         tvForget = (TextView) findViewById(R.id.tv_forget);
+        tvForget.setOnClickListener(this);
 
         //设置选中的状态
         boolean isCheck = ShareUtils.getBoolean(this,"keepPass",false);
@@ -92,9 +93,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
                     });
                 }else {
-                    Toast
-                            .makeText(this,"输入框不能为空",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"输入框不能为空",Toast.LENGTH_SHORT).show();
                 }
+                break;
+            case R.id.tv_forget:
+                startActivity(new Intent(this,ForgetPasswordActivity.class));
                 break;
         }
     }
