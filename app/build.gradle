@@ -43,6 +43,9 @@ dependencies {
 
     //Bmob
     compile 'cn.bmob.android:bmob-sdk:3.5.0'
+
+    //CircleImageView
+    compile 'de.hdodenhof:circleimageview:2.2.0'
 }
 
 

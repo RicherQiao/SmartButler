@@ -31,4 +31,10 @@
     <string name="password_again">再次输入密码</string>
     <string name="input_email">请输入邮箱</string>
     <string name="tv_login">正在登录</string>
+    <string name="edit_user">编辑资料</string>
+    <string name="edit_name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="define">确认修改</string>
+    <string name="express">物流查询</string>
+    <string name="exit">退出登录</string>
 </resources>
