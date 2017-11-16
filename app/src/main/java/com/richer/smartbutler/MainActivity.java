@@ -19,6 +19,7 @@ import com.richer.smartbutler.fragment.WechatFragment;
 import com.richer.smartbutler.ui.SettingActivity;
 import com.richer.smartbutler.utils.L;
 import com.richer.smartbutler.utils.ShareUtils;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         
         initData();
         initView();
+
 
     }
 
